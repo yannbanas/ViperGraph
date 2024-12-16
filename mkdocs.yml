@@ -1,0 +1,35 @@
+site_name: ViperGraph Documentation
+docs_dir: docs/  # Spécifie que le dossier actuel est le répertoire des docs
+
+# Utilise le thème Material
+theme:
+  name: material
+  palette:
+    - scheme: slate  # Active le mode sombre par défaut
+      primary: deep purple  # Couleur principale
+      accent: light blue    # Couleur d'accentuation
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Passer en mode clair
+    - scheme: default  # Option de mode clair
+      primary: deep purple
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Passer en mode sombre
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+
+nav:
+  - Home: index.md
+  - Modules:
+      - Edge: edge.md
+      - Node: node.md
+
+extra:
+  mkdocstrings:
+    python:
+      paths: [D:\Experimentation\ViperGraph\src]
